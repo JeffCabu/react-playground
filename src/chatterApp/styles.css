@@ -1,0 +1,12 @@
+.chatSection {
+  border: red solid 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userName{
+  border: 1px solid black;
+}
+.chat{
+  border: 1px green solid;
+}
