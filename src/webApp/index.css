@@ -1,0 +1,101 @@
+#react-app{
+  background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);;
+/* 	height: 100vh;
+	width: 100vw; */
+}
+
+.nav{
+	display: flex;
+	justify-content: space-around;
+	background-color: #ecf0f1;
+	box-shadow: 5px 5px 5px #888888;
+    margin: -10px -10px 20px -10px
+}
+
+.jumbotron{
+	color: #e74c3c;
+	border: solid 3px #f1c40f;
+	border-radius:20px;
+	padding: 20px;
+	background-color: #ecf0f1;
+	text-align: center;
+	margin: 10px 20px 10px 20px;
+}
+
+.link{	
+	width: 25%;
+	display: flex;
+	justify-content: space-around;
+	
+}
+
+.link:hover{
+	background: grey;
+	cursor: pointer;
+	border-bottom: 3px solid red;
+	width: 33%;	
+}
+
+
+.sectionStyle{
+	display: flex;
+	justify-content: space-around;
+	
+}
+.about{
+	border:3px solid red;
+	
+}
+.services{
+	border:3px solid blue;
+	
+}
+.products{
+	border:3px solid green;
+	
+}
+.about,
+.services,
+.products
+{
+	background-color: grey;
+	animation-name: fadeIn 3s;
+}
+*{
+	box-sizing: border-box;
+	animation-fill-mode: both;
+	
+}
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
+}
+.service-card{
+	border: 3px solid orange;
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.icon-circle{
+	border-radius:20px;
+	width: 40px;
+	height: 40px;
+	background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.service-icon{
+	font-size: 33px;
+	cursor: pointer;
+}
+.servicesCardHolder{
+	display: flex;
+	
+	
+}

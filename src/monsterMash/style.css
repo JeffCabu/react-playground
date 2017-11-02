@@ -1,0 +1,28 @@
+.container{
+  
+}
+.jumbotron{
+  border: 3px blue solid;
+  text-align: center;
+  background-image: url("http://www.mylpl.info/wp-content/uploads/2017/09/Monster-Mash-Slide.png");
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-shadow: white;
+}
+
+.monsterContainer{
+  display: flex;
+}
+
+.monsterCardContainer{
+  border: 3px solid red;
+  width: 33%;
+  height: 33%;
+  justify-content: space-around;
+}
+
+.monsterCardContainer img{
+  width: 100%;
+  height: 50%;
+}

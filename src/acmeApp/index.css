@@ -1,0 +1,100 @@
+.page{
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 3px black solid; */
+  background: url(https://media.wired.com/photos/59327084aef9a462de982bfd/master/w_1000,c_limit/ACMECorporationPoster_1000x1500_FringeFocus.jpg)fixed center;
+}
+  
+.jumbotron{
+  font-family: 'Acme', sans-serif;
+  color: rgb(252, 211, 158);
+  background-color: rgba(231, 133, 133, 0.603);
+  width: 100%;
+  text-align: center;
+  text-shadow: black;
+}
+
+
+/* . hoverbar{
+  visibility: visible;
+  cursor: pointer;
+} */
+
+.customerCardContainer{
+  background-clip: padding-box;
+  background-color: rgba(107, 18, 18, 0.74);
+  border-left: 1px solid rgba(0, 0, 0, .4);
+  font-size: 14px;
+  height: 100%;
+  line-height: 6px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 205px;
+  z-index: 0;
+}
+
+.customerCardContainer img{
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.companyContainer{
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  /* border: 3px solid blue; */
+  justify-content: flex-end;
+}
+
+.addressFooter{
+  /* border: 1px solid purple; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 1920px;
+  padding: 1rem;
+  background-color: #240706;
+  color: rgba(255, 255, 255, 0.39);
+  position: relative;
+  z-index: 10;
+  
+}
+
+/* /////----Right side-bar----///// */
+.customerDeck{
+  display: flex;
+  /* border: 5px solid red; */
+  border-left: 1px solid rgb(37, 36, 36);
+  border-bottom: 1px solid rgb(37, 36, 36);
+}
+.pContainer{
+  /* border: 2px solid brown; */
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.p{
+  /* border: 3px blue solid; */
+  margin-top: 9px;
+  margin-bottom: 0px;
+  height: 10px;
+}
+.pOne{
+  /* border: 3px green solid; */  
+  margin-top: 5px;
+  margin-bottom: 0px;
+  height: 10px;
+}
+p,
+pOne{
+  color: rgb(224, 163, 94);
+}
+
+
+/* ---///---TestZone---///--- */
+/* .company{
+  border: 10px solid green;
+} */
