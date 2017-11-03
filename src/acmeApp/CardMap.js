@@ -1,12 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import CustomerCard from './CustomerCard'
 
 const CardMaps = ({arr}) => {
   return (
     <div>
       {
-        arr.map((customer) => { // this doesnt work
+        arr.map((customer) => {
           return <CustomerCard customer={customer} />
         })
       }
