@@ -11,9 +11,9 @@ class App extends Component {
     this.setState({ sentences: data.sentences })
   }
   reset = () => {
-    this.setState({ sentences: data.sentences, serchTerm: '' })
+    this.setState({ sentences: data.sentences, searchTerm: '' })
   }
-  handleSearchTermChagne = (params) => {
+  handleSearchTermChange = (params) => {
     let wordToSearch = params.target.value
     this.setState({ searchTerm: wordToSearch })
   }
@@ -43,8 +43,8 @@ class App extends Component {
         <form onSubmit={this.submitForm}>
           <h2>Google</h2>
           <input
-            value={this.state.serachTerm}
-            onChange={this.handleSearchTermChagne}
+            value={this.state.searchTerm}
+            onChange={this.handleSearchTermChange}
             type='text'
             placeholder='Search'
           />

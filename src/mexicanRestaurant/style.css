@@ -1,0 +1,17 @@
+.lableRed{
+  background-color: rgba(241, 72, 72, 0.664);
+
+}
+.lableWhite{
+  background-color: rgba(255, 255, 255, 0.644);
+
+}
+.lableGreen{
+  background-color: rgba(38, 158, 27, 0.644);
+
+}
+/* .lableRed,
+.lableGreen,
+.lableWhite{
+  width: 100%
+} */

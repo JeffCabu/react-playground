@@ -9,8 +9,9 @@ import registerServiceWorker from './registerServiceWorker'
 // import MappingAndFiltering from './MappingAndFiltering/MappingAndFiltering'
 // import MonsterApp from './monsterMash/monsterApp'
 // import SmartApp from './smartApp/App'
-import ChatterApp from './chatterApp/ChatterApp'
+// import ChatterApp from './chatterApp/ChatterApp'
+import App from './mexicanRestaurant/App'
 // import App from './searchApp/App'
 
-ReactDOM.render(<ChatterApp />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
 registerServiceWorker()
