@@ -10,7 +10,8 @@ import registerServiceWorker from './registerServiceWorker'
 // import MonsterApp from './monsterMash/monsterApp'
 // import SmartApp from './smartApp/App'
 // import ChatterApp from './chatterApp/ChatterApp'
-import App from './mexicanRestaurant/App'
+// import App from './mexicanRestaurant/App'
+import App from './tex-mex-solution/App'
 // import App from './searchApp/App'
 
 ReactDOM.render(<App />, document.getElementById('root'))

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 const AddressStyle = {
   container: {
     border: '3px dashed red',
@@ -27,5 +27,13 @@ const Address = ({street, suite, city, state, zip}) => {
       </div>
     </div>
   )
+}
+
+Address.propTypes = {
+  street: PropTypes.string.isRequired,
+  suite: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  state: PropTypes.string.isRequired,
+  zip: PropTypes.string.isRequired
 }
 export default Address

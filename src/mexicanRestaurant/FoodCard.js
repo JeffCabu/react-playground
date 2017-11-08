@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ContentItems from './ContentItems'
 const cardStyle = {
   flex: {
@@ -62,6 +63,9 @@ const FoodCard = ({items}) => {
   )
 }
 
+FoodCard.propTypes = {
+  items: PropTypes.string.isRequired
+}
 export default FoodCard
 // items.filter(items => {
 //           return <ContentItems items={items.category === 'spiceLevel'} />

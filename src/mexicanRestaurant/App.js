@@ -13,7 +13,7 @@ class App extends Component {
     word: undefined
   }
   componentDidMount = () => {
-    this.setState({ data: data.data })
+    this.setState({ data: data.items })
   }
   search = (e) => {
     let wordSearch = e.target.value
