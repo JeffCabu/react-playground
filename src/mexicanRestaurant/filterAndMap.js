@@ -25,9 +25,10 @@ const items = [
 // AA= 4, IE= 7, SS= 5, DD= 3
 const mild = items.filter(item => {
   return item.spiceLevel <= 3
-})// .map(i => {
-// return i
-// })
+}).map(i => {
+  return i
+})
+console.log(mild)
 const mildMap = mild.map(item => {
   return item
 })
@@ -45,7 +46,7 @@ const categoryS = items.filter(item => {
 }).map(i => {
   return i
 })
-console.log(categoryS)
+// console.log(categoryS)
 // console.log(reallySpicy)
 // console.log(medium)
 // console.log(mild)

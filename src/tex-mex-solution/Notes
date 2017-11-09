@@ -1,0 +1,39 @@
+import React, {Component} from 'react'
+// import data from './Data'
+// import RestaurantInfo from './RestaurantInfo'
+// import MenuContainer from './MenuContainer'
+
+class TexMexApp extends Component {
+  state = {
+    nameInput: undefined
+  }
+
+  alertName = () => alert(this.state.nameInput)
+
+  handleNameInput = (event) => {
+    console.log(event.target.value)
+    this.setState({ nameInput: event.target.value })
+  }
+
+  render () {
+    return (
+      <div>
+        <input onChange={this.handleNameInput} />
+        <button onClick={this.alertName}> Say Hello </button>
+        {
+          this.state.nameInput
+            ? this.state.nameInput
+            : null
+        }
+      </div>
+    )
+  }
+}
+
+export default TexMexApp
+// <RestaurantInfo
+// name={data.company[0].title}
+// address={data.address}
+// phone={data.phone}
+// />
+// <MenuContainer />

@@ -14,21 +14,35 @@ export default class MenuContainer extends Component {
   handleSearchTermChange = (e) => {
     this.setState({ searchTerm: e.target.value })
   }
+
+  resetMenuList = () => {
+    this.setState({ menuItems: data.items, searchTerm: '' })
+  }
   updateMenuList = (e) => {
     alert('you have an alert')
     e.preventDefault()
     const updateMenuItems = this.state.menuItems.filter(item => {
-      return item.name === this.state.searchTerm // return the input value
+      const searchTerm = this.state.searchTerm.toLowerCase()
+      const menuItem = item.name.toLowerCase()
+      return menuItem.includes(searchTerm)
     })
-    console.log(updateMenuItems)
+    this.setState({ menuItems: updateMenuItems })
   }
-
+  mild = () => {
+    const mild = this.state.menuItems.filter(item => {
+      return item.spiceLevel <= 3
+    })
+    this.setState({ menuItems: mild })
+  }
   render () {
     return (
       <div>
         <SearchForm
           handleSearchTermChange={this.handleSearchTermChange}
           updateMenuList={this.updateMenuList}
+          resetMenuList={this.resetMenuList}
+          searchTerm={this.state.searchTerm}
+          mild={this.mild}
         />
         {
           this.state.menuItems
