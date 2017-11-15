@@ -1,7 +1,4 @@
 import React, {Component} from 'react'
-// import data from './Data'
-// import RestaurantInfo from './RestaurantInfo'
-// import MenuContainer from './MenuContainer'
 
 class TexMexApp extends Component {
   state = {
@@ -31,9 +28,3 @@ class TexMexApp extends Component {
 }
 
 export default TexMexApp
-// <RestaurantInfo
-// name={data.company[0].title}
-// address={data.address}
-// phone={data.phone}
-// />
-// <MenuContainer />

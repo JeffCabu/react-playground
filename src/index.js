@@ -11,8 +11,11 @@ import registerServiceWorker from './registerServiceWorker'
 // import SmartApp from './smartApp/App'
 // import ChatterApp from './chatterApp/ChatterApp'
 // import App from './mexicanRestaurant/App'
-import App from './tex-mex-solution/App'
+// import App from './tex-mex-solution/App'
 // import App from './searchApp/App'
+// import App from './holidayShoppingList/App'
+// import App from './ToDo/App'
+import App from './toDoSolution/App'
 
 ReactDOM.render(<App />, document.getElementById('root'))
 registerServiceWorker()

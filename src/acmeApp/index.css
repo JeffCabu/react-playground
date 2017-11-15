@@ -58,7 +58,8 @@
   width: 1920px;
   padding: 1rem;
   background-color: #240706;
-  color: rgba(255, 255, 255, 0.39);
+  /* color: rgba(255, 255, 255, 0.39); */
+  color: rgba(45, 59, 192, 0.39);
   position: relative;
   z-index: 10;
   
