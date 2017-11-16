@@ -38,7 +38,7 @@ const style = {
     cursor: 'pointer'
   }
 }
-// line 45: figure out how to make the curosr: pointer for both the check box and the "Task complete".
+// line 45: figure out how to make the cursor: pointer for both the check box and the "Task complete".
 // 45 continued: figure out how to make the task complete also check the box when clicked. 
 // " " make it fade out but not completely after being checked. also input the time it was completed.
 const ToDos = ({toDo}) => {

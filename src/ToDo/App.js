@@ -4,8 +4,8 @@ import Nexus from './Nexus'
 const styleApp = {
   background: {
     background: 'url(http://verdewall.com/wp-content/uploads/2016/08/Background-437.jpg)'
-    // width: '1920px',
-    // height: '1080px',
+    // width: '100vw',
+    // height: '100vh',
 
   },
   container: {
