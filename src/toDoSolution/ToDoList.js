@@ -9,7 +9,7 @@ const style = {
     margin: 5
   }
 }
-const ToDoList = ({toDos, title, markComplete}) => {
+const ToDoList = ({toDos, title, markComplete, deleteToDo}) => {
   return (
     <div style={style.container}>
       <h3>{title}</h3>
@@ -22,9 +22,10 @@ const ToDoList = ({toDos, title, markComplete}) => {
               complete={toDo.complete}
               id={toDo.id}
               markComplete={markComplete}
+              deleteToDo={deleteToDo}
             />
           })
-          : 'Nothing To Do'
+          : 'No To Do'
       }
     </div>
   )
@@ -33,6 +34,7 @@ const ToDoList = ({toDos, title, markComplete}) => {
 ToDoList.propTypes = {
   toDos: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
-  markComplete: PropTypes.func.isRequired
+  markComplete: PropTypes.func.isRequired,
+  deleteToDo: PropTypes.func.isRequired
 }
 export default ToDoList

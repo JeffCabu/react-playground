@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const ToDo = ({title, dueDate, id, complete, markComplete}) => {
+const ToDo = ({title, dueDate, id, complete, markComplete, deleteToDo}) => {
   return (
     <div>
       <button type='button' onClick={markComplete} id={id}>
@@ -10,6 +10,7 @@ const ToDo = ({title, dueDate, id, complete, markComplete}) => {
             ? 'Mark as Incomplete'
             : 'Mark as Complete'
         }</button>
+      <button type='button' onClick={deleteToDo} id={id}>Delete</button>
 
       <p>{title}</p>
       <p>{dueDate}</p>
@@ -23,7 +24,8 @@ ToDo.propTypes = {
   dueDate: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   complete: PropTypes.string.isRequired,
-  markComplete: PropTypes.func.isRequired
+  markComplete: PropTypes.func.isRequired,
+  deleteToDo: PropTypes.func.isRequired
 }
 
 export default ToDo

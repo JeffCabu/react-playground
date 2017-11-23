@@ -17,14 +17,13 @@ export default class ToDo extends Component {
     incomplete: []
   }
   componentDidMount () {
-    const toDos = JSON.parse(localStorage.getItem('toDos'))
+    const toDos = JSON.parse(localStorage.getItem('toDos')) || []
     console.log(toDos, 'localStorage toDos')
     this.setState({toDos: toDos})
     setTimeout(() => {
       this.sortByCompleted()
-    }, 3000)
+    }, 1000)
   }
-  // this.setState is A-sync (top => down)
   updateTitle = (e) => {
     this.setState({ title: e.target.value })
   }
@@ -33,27 +32,34 @@ export default class ToDo extends Component {
   }
   addToDo = (e) => {
     e.preventDefault()
-    const allToDo = this.state.toDos
+    const allToDo = this.state.toDos || []
     if (this.state.title && this.state.dueDate) {
       const newToDo = {
         title: this.state.title,
         dueDate: this.state.dueDate,
         complete: false,
-        id: this.state.toDos.length + 1
+        id: this.state.toDos
+          ? this.state.toDos.length + 1
+          : 1
       }
       allToDo.push(newToDo)
       this.setState({ toDos: allToDo })
-      this.sortByCompleted()
-      localStorage.setItem('toDos', JSON.stringify(this.state.toDos))
+      localStorage.setItem('toDos', JSON.stringify(allToDo))
       alert('This item has been added')
       this.setState({ title: '', dueDate: '' })
+      this.sortByCompleted()
     } else {
       alert('Cannot have Title or Due Date')
     }
   }
   sortByCompleted = () => {
-    const completed = this.state.toDos.filter(item => item.complete)
-    const incomplete = this.state.toDos.filter(item => !item.complete)
+    console.log(this.state.toDos)
+    const completed = this.state.toDos
+      ? this.state.toDos.filter(item => item.complete)
+      : []
+    const incomplete = this.state.toDos
+      ? this.state.toDos.filter(item => !item.complete)
+      : []
     this.setState({ completed: completed, incomplete: incomplete })
   }
   markComplete = (e) => {
@@ -63,6 +69,25 @@ export default class ToDo extends Component {
     console.log(theToDo)
     theToDo.complete = !theToDo.complete
     this.sortByCompleted()
+  }
+  resetToDos = () => {
+    this.setState({ toDos: [], completed: [], incomplete: [] })
+    localStorage.clear()
+  }
+  deleteToDo = (e) => {
+    const theToDo = this.state.toDos.find(item => {
+      return Number(e.target.id) === Number(item.id)
+    })
+    console.log(theToDo)
+    const newArray = this.state.toDos.filter(item => {
+      return item.id !== theToDo.id
+    })
+    console.log(newArray)
+    this.setState({ toDos: newArray })
+    localStorage.setItem('toDos', JSON.stringify(newArray))
+    setTimeout(() => {
+      this.sortByCompleted()
+    }, 1000)
   }
 
   render () {
@@ -75,6 +100,8 @@ export default class ToDo extends Component {
           updateDueDate={this.updateDueDate}
           updateTitle={this.updateTitle}
         />
+        <small>If you see "Nothing to do" Click the "Clear all to do" button once to begin.</small>
+        <button type='button' onClick={this.resetToDos}>Clear all to do</button>
         <div>
           {
             this.state.toDos
@@ -82,13 +109,15 @@ export default class ToDo extends Component {
                 <div style={style.toDosList}>
                   <ToDoList toDos={this.state.completed}
                     markComplete={this.markComplete}
+                    deleteToDo={this.deleteToDo}
                     title='Task/s Completed' />
                   <ToDoList toDos={this.state.incomplete}
                     markComplete={this.markComplete}
+                    deleteToDo={this.deleteToDo}
                     title='Incomplete Task/s' />
                 </div>
               )
-              : 'Loading'
+              : 'Nothing to do'
           }
         </div>
       </div>
